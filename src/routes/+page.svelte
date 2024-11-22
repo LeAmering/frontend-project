@@ -4,7 +4,7 @@
 		console.log(email);
 
 		if (email.includes('@') && email.includes('.')) {
-			// go to the success page
+			window.location.href = '/success';
 		} else {
 			//make button red and write invalid
 		}
@@ -38,7 +38,9 @@
 				placeholder="Email@company.com"
 				class="bg-white border border-gray-300 rounded-md w-4/5 px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500 mb-2"
 			/>
-			<button class="btn btn-active btn-neutral">Subscribe to monthly newsletter</button>
+			<button class="btn btn-active btn-neutral" onclick={checkEmail}
+				>Subscribe to monthly newsletter</button
+			>
 		</div>
 
 		<div class="flex items-center justify-center h-full p-0 flex-shrink-0">
