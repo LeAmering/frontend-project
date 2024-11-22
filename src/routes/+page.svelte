@@ -1,12 +1,13 @@
 <script>
-	function checkEmail() {
-		const email = document.querySelector('input').value;
-		console.log(email);
+	let email = '';
+	let emailValid = true;
 
+	function checkEmail() {
 		if (email.includes('@') && email.includes('.')) {
+			emailValid = true;
 			window.location.href = '/success';
 		} else {
-			//make button red and write invalid
+			emailValid = false;
 		}
 	}
 </script>
@@ -18,7 +19,6 @@
 		<div class="max-w-1/2 pl-10">
 			<h1 class="text-5xl font-bold mb-6">Stay updated!</h1>
 			<p class="mb-0">Join 60.000+ product managers receiving monthly</p>
-
 			<p class="mb-4">updates on:</p>
 			<div class="flex items-center mb-1">
 				<img src="assets/images/icon-list.svg" alt="Check" class="w-5 h-5 mr-3" />
@@ -34,13 +34,19 @@
 			</div>
 			<p class="text-xs font-bold mt-3">Email address</p>
 			<input
+				bind:value={email}
 				type="text"
 				placeholder="Email@company.com"
-				class="bg-white border border-gray-300 rounded-md w-4/5 px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500 mb-2"
+				class="bg-white border rounded-md w-4/5 px-4 py-2 focus:outline-none focus:ring-0 mb-2 border-gray-300"
+				class:border={emailValid ? 'border-gray-300' : 'border-red-500'}
 			/>
-			<button class="btn btn-active btn-neutral" onclick={checkEmail}
-				>Subscribe to monthly newsletter</button
+
+			<button
+				class="btn btn-active btn-neutral bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 hover:outline-0 text-white py-2 px-4 rounded-md transition-all duration-300"
+				on:click={checkEmail}
 			>
+				Subscribe to monthly newsletter
+			</button>
 		</div>
 
 		<div class="flex items-center justify-center h-full p-0 flex-shrink-0">
