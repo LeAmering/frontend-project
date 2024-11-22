@@ -1,3 +1,16 @@
+<script>
+	function checkEmail() {
+		const email = document.querySelector('input').value;
+		console.log(email);
+
+		if (email.includes('@') && email.includes('.')) {
+			// go to the success page
+		} else {
+			//make button red and write invalid
+		}
+	}
+</script>
+
 <div class="h-screen w-screen bg-hsl-[235_18%_26%] flex justify-center items-center">
 	<div
 		class="bg-white text-black rounded-3xl shadow-lg w-3/5 h-3/4 flex justify-between items-center p-6 overflow-hidden"
@@ -26,3 +39,5 @@
 		</div>
 	</div>
 </div>
+
+<button class="btn btn-active btn-neutral">Subscribe to monthly newsletter</button>
