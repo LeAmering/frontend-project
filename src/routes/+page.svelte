@@ -16,7 +16,7 @@
 
 <div class="h-screen w-screen bg-hsl-[235_18%_26%] flex justify-center items-center">
 	<div
-		class="bg-white text-black rounded-3xl shadow-lg w-3/5 h-3/4 flex justify-between items-center p-6 overflow-hidden"
+		class="bg-white text-black rounded-3xl shadow-lg w-3/5 h-3/4 flex flex-col-reverse lg:flex-row justify-between items-center p-6 overflow-hidden"
 	>
 		<div class="max-w-1/2 pl-10">
 			<h1 class="text-5xl font-bold mb-6">Stay updated!</h1>
@@ -34,11 +34,12 @@
 				<p class="mb-1">And much more!</p>
 			</div>
 
-			{#if !emailValid}
-				<p class="text-red-500 text-sm mb-2">Valid email required</p>
-			{/if}
-
-			<p class="text-xs font-bold mt-3">Email address</p>
+			<div class="flex items-center justify-between w-4/5 mb-2">
+				<p class="text-xs font-bold">Email address</p>
+				{#if !emailValid}
+					<p class="text-red-500 text-xs font-bold">Valid email required</p>
+				{/if}
+			</div>
 
 			<input
 				bind:value={email}
