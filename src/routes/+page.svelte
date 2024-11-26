@@ -2,11 +2,10 @@
 	let email = '';
 	let emailValid = true;
 
-	// Function to check if the email is valid
 	function checkEmail() {
 		if (email.includes('@') && email.includes('.')) {
 			emailValid = true;
-			// Redirect with email in URL
+
 			window.location.href = `/success?email=${encodeURIComponent(email)}`;
 		} else {
 			emailValid = false;
@@ -14,7 +13,6 @@
 		return emailValid;
 	}
 
-	// Reset the email validity when the user starts typing
 	function handleInput() {
 		if (!emailValid) {
 			emailValid = true;
@@ -24,9 +22,9 @@
 
 <div class="h-screen w-screen bg-hsl-[235_18%_26%] flex justify-center items-center">
 	<div
-		class="bg-white text-black rounded-3xl shadow-lg w-3/5 h-3/4 flex flex-col-reverse lg:flex-row justify-between items-center p-6 overflow-hidden"
+		class="bg-white text-black rounded-3xl shadow-lg lg:w-3/5 lg:h-3/4 flex flex-col-reverse lg:flex-row justify-between items-center p-6 overflow-hidden"
 	>
-		<div class="max-w-1/2 pl-10">
+		<div class="max-w-1/2 lg:pl-10">
 			<h1 class="text-5xl font-bold mb-6">Stay updated!</h1>
 			<p class="mb-0">Join 60,000+ product managers receiving monthly updates on:</p>
 			<div class="flex items-center mb-1">
