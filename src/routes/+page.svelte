@@ -9,6 +9,7 @@
 		} else {
 			emailValid = false;
 		}
+		return emailValid;
 	}
 </script>
 
@@ -18,8 +19,7 @@
 	>
 		<div class="max-w-1/2 pl-10">
 			<h1 class="text-5xl font-bold mb-6">Stay updated!</h1>
-			<p class="mb-0">Join 60.000+ product managers receiving monthly</p>
-			<p class="mb-4">updates on:</p>
+			<p class="mb-0">Join 60,000+ product managers receiving monthly updates on:</p>
 			<div class="flex items-center mb-1">
 				<img src="assets/images/icon-list.svg" alt="Check" class="w-5 h-5 mr-3" />
 				<p>Product discovery and building what matters</p>
@@ -32,15 +32,23 @@
 				<img src="assets/images/icon-list.svg" alt="Check" class="w-5 h-5 mr-3" />
 				<p class="mb-1">And much more!</p>
 			</div>
+
+			{#if !emailValid}
+				<p class="text-red-500 text-sm mb-2">Valid email required</p>
+			{/if}
+
 			<p class="text-xs font-bold mt-3">Email address</p>
+
+			<!-- Input with dynamic error styling -->
 			<input
 				bind:value={email}
 				type="text"
 				placeholder="Email@company.com"
-				class="bg-white border rounded-md w-4/5 px-4 py-2 focus:outline-none focus:ring-0 mb-2 border-gray-300"
-				class:border={emailValid ? 'border-gray-300' : 'border-red-500'}
+				class="bg-white border rounded-md w-4/5 px-4 py-2 focus:outline-none focus:ring-0 mb-2
+				{emailValid ? 'border-gray-300' : ' border-red-500'}"
 			/>
 
+			<!-- Submit button -->
 			<button
 				class="btn btn-active btn-neutral bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 hover:outline-0 text-white py-2 px-4 rounded-md transition-all duration-300"
 				on:click={checkEmail}
