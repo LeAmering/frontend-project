@@ -2,15 +2,23 @@
 	let email = '';
 	let emailValid = true;
 
+	// Function to check if the email is valid
 	function checkEmail() {
 		if (email.includes('@') && email.includes('.')) {
 			emailValid = true;
-
+			// Redirect with email in URL
 			window.location.href = `/success?email=${encodeURIComponent(email)}`;
 		} else {
 			emailValid = false;
 		}
 		return emailValid;
+	}
+
+	// Reset the email validity when the user starts typing
+	function handleInput() {
+		if (!emailValid) {
+			emailValid = true;
+		}
 	}
 </script>
 
@@ -46,7 +54,8 @@
 				type="text"
 				placeholder="Email@company.com"
 				class="bg-white border rounded-md w-4/5 px-4 py-2 focus:outline-none focus:ring-0 mb-2
-				{emailValid ? 'border-gray-300' : ' border-red-500 text-red-500 bg-red-50'}"
+		  {emailValid ? 'border-gray-300' : 'border-red-500 text-red-500 bg-red-50'}"
+				on:input={handleInput}
 			/>
 
 			<button
