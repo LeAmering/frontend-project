@@ -39,16 +39,14 @@
 
 			<p class="text-xs font-bold mt-3">Email address</p>
 
-			<!-- Input with dynamic error styling -->
 			<input
 				bind:value={email}
 				type="text"
 				placeholder="Email@company.com"
 				class="bg-white border rounded-md w-4/5 px-4 py-2 focus:outline-none focus:ring-0 mb-2
-				{emailValid ? 'border-gray-300' : ' border-red-500'}"
+				{emailValid ? 'border-gray-300' : ' border-red-500 text-red-500 bg-red-50'}"
 			/>
 
-			<!-- Submit button -->
 			<button
 				class="btn btn-active btn-neutral bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 hover:outline-0 text-white py-2 px-4 rounded-md transition-all duration-300"
 				on:click={checkEmail}
