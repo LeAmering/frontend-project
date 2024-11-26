@@ -5,7 +5,8 @@
 	function checkEmail() {
 		if (email.includes('@') && email.includes('.')) {
 			emailValid = true;
-			window.location.href = '/success';
+
+			window.location.href = `/success?email=${encodeURIComponent(email)}`;
 		} else {
 			emailValid = false;
 		}
