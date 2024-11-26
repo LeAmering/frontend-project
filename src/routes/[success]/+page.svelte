@@ -23,8 +23,9 @@
 				confirm your subscription.
 			</p>
 
-			<button class="btn btn-active btn-neutral" onclick={(window.location.href = '/')}
-				>Dismiss message</button
+			<button
+				class="btn btn-active btn-neutral bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 hover:outline-0 text-white py-2 px-4 rounded-md transition-all duration-300"
+				onclick={(window.location.href = '/')}>Dismiss message</button
 			>
 		</div>
 	</div>
