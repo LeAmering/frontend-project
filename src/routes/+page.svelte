@@ -22,9 +22,9 @@
 
 <div class="h-screen w-screen bg-hsl-[235_18%_26%] flex justify-center items-center">
 	<div
-		class="bg-white text-black rounded-3xl shadow-lg lg:w-3/5 lg:h-3/4 flex flex-col-reverse lg:flex-row justify-between items-center p-6 overflow-hidden"
+		class="bg-white text-black rounded-3xl shadow-lg lg:w-3/5 lg:h-3/4 flex flex-col-reverse lg:flex-row justify-between items-center overflow-hidden"
 	>
-		<div class="max-w-1/2 lg:pl-10">
+		<div class="max-w-1/2 p-6">
 			<h1 class="text-5xl font-bold mb-6">Stay updated!</h1>
 			<p class="mb-0">Join 60,000+ product managers receiving monthly updates on:</p>
 			<div class="flex items-center mb-1">
@@ -63,8 +63,7 @@
 				Subscribe to monthly newsletter
 			</button>
 		</div>
-
-		<div class="flex items-center justify-center h-full p-0 flex-shrink-0">
+		<div class="flex items-center justify-center h-full p-0 flex-shrink-0 lg:p-6">
 			<img
 				class="w-auto h-full object-contain"
 				src="assets/images/illustration-sign-up-desktop.svg"
