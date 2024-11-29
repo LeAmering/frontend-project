@@ -7,6 +7,7 @@
 		const urlParams = new URLSearchParams(window.location.search);
 		email = urlParams.get('email');
 	});
+	//comment
 </script>
 
 <div class="h-screen w-screen bg-hsl-[235_18%_26%] flex justify-center items-center">
