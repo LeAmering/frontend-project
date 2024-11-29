@@ -11,7 +11,7 @@
 
 <div class="h-screen w-screen bg-hsl-[235_18%_26%] flex justify-center items-center">
 	<div
-		class="bg-white text-black rounded-3xl shadow-lg w-3/5 h-3/4 flex justify-between items-start p-6 overflow-hidden"
+		class="bg-white text-black rounded-3xl shadow-lg lg:w-3/5 lg:h-3/4 flex flex-col-reverse lg:flex-row justify-between items-center p-6 overflow-hidden"
 	>
 		<div class="max-w-1/2 pl-10">
 			<div>
